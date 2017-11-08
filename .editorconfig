@@ -1,0 +1,27 @@
+# 不同编辑器代码风格统一
+root = true
+
+# 所有文件都匹配
+[*] 
+end_of_lint = lf
+insert_final_newline = true
+
+# 匹配js或py
+[*.{js,py}]
+charset = utf-8
+
+[*.py]
+indent_style = space
+inddent_size = 4
+
+[Makefile]
+# 缩进风格
+indent_style = tab
+
+[lib/**.js]
+indent_style = space
+indent_size = 2
+
+[{package.json, .travis.ym1}]
+indent_style = space
+indent_size = 2
