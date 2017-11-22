@@ -1,27 +1,22 @@
 module.exports = {
     "extends": "eslint:recommended",
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
+        "indent": ["error", 4],
         "linebreak-style": [
             "error",
             "unix"
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
             "always"
         ],
-        "on-console": ["error", { // 关闭：off 警告：warn 报错：error
-            "allow": ["warn", "error", "info"] // 允许写：console.error console.info console.warn
-        }]
+        "no-console":["off"]
     },
-    "parser": "balbel-eslint", // 制定自己的解析器
+    "parser": "babel-eslint", // 制定自己的解析器
     "parserOptions": { 
         "ecmaVersion": 6, // es6
         "sourceType": "script" // script module
