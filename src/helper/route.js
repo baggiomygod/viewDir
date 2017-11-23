@@ -53,7 +53,6 @@ module.exports = async function (req, res, filePath, conf) {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'text/html');
             const dir = path.relative(conf.root, filePath);
-            console.log('dir:', dir);
             const data = {
                 title: path.basename(filePath),
                 dir: dir ? `/${dir}` : '',
@@ -74,7 +73,7 @@ module.exports = async function (req, res, filePath, conf) {
             res.end(template(data));
         }
     } catch (e) {
-        console.log('err:', e);
+        console.error(e);
         res.statusCode = 404;
         res.setHeader('Content-Type', 'text/plain');
         res.end(`404  ${filePath} id not a directory or file!`);

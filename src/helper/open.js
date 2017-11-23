@@ -5,7 +5,7 @@ module.exports = url => {
     case 'darwin':
         exec(`open ${url}`);
         break;
-    case 'cin32':
+    case 'win32':
         exec(`start ${url}`);
         break;
     default:

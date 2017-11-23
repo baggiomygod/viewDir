@@ -12,7 +12,6 @@ class Server {
     start(){
         const server = http.createServer((req, res) => {
             const filePath = path.join(this.conf.root, req.url);
-            console.log('filePath:', filePath);
             // fs.stat 获取文件或目录的详细信息
             route(req,res,filePath, this.conf);
         }

@@ -25,7 +25,6 @@ const mimeTypes = {
 };
 
 module.exports = (filePath) => {
-    console.log('mime:', path.extname(filePath).split('.'));
     // extname 返回扩展名
     let ext = path.extname(filePath)
         .split('.')
